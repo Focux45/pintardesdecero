@@ -1,9 +1,18 @@
 import streamlit as st
 from streamlit_drawable_canvas import st_canvas
+from openai import OpenAI
 
 st.set_page_config(page_title='Pintando con estilo', layout='wide')
 st.title('Vamos a dibujar algo pro')
 st.subheader("Dibuja en el panel")
+
+
+with st.sidebar:
+  st.subheader("Prueba")
+  drawing_mode = st.sidebar.selectbox(
+    "Herramienta de Dibujo:",
+    ("freedraw", "line", "rect", "circle"),
+  )
 
 # Add canvas component
 # Specify canvas parameters in application
