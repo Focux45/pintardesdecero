@@ -1,5 +1,7 @@
 import streamlit as st
 from streamlit_drawable_canvas import st_canvas
+from openai import OpenAI
+import openai
 
 st.set_page_config(page_title='Pintando con estilo', layout='wide')
 st.title('Vamos a dibujar algo pro')
@@ -35,3 +37,6 @@ canvas_result = st_canvas(
     width=400,
     key="canvas",
 )
+ke = st.text_input('Ingresa tu Clave')
+#os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
+os.environ['OPENAI_API_KEY'] = ke
