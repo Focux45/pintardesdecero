@@ -14,7 +14,7 @@ bg_color = '#ffffff'
 stroke_color = st.color_picker("Pick A Color", "#00f900")
 st.write("The current color is", stroke_color)
 with st.sidebar:
-    st.subheader([stroke_width])
+    st.subheader("Propiedades")
 
 canvas_result = st_canvas(
     fill_color="rgba(255, 165, 0, 0.3)",  # Fixed fill color with some opacity
